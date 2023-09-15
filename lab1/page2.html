@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lab 1</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            border-style: outset;
+            border-color: #d9d3b4;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                'header header header header'
+                'left main main right'
+                'left menu menu right'
+                'footer footer footer right';
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr, 3fr, 1fr;
+        }
+
+        .header {
+            grid-area: header;
+            background: #ab7e2b;
+            float: left;
+            font-size: 80px;
+            color: #061706;
+            font-family: 'Bradley Hand ITC';
+            padding: 20px;
+        }
+
+        .left {
+            grid-area: left;
+            background-image: url("itachi.jpg");
+            float: left;
+        }
+
+        .main {
+            grid-area: main;
+            background: #71ab7a;
+            float: left;
+        }
+
+        .right {
+            grid-area: right;
+            background: #71ab7a;
+            color: #061706;
+            font-size: 30px;
+            font-family: Candara;
+            float: left;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #44437a;
+            padding: 35px;
+            float: left;
+            font-size: 25px;
+            color: #d9d3b4;
+        }
+
+        .menu {
+            grid-area: menu;
+            background: #a63a57;
+            float: left;
+            font-size: 25px;
+        }
+        .menulinks li {
+            width: 130px;
+            display: inline-block;
+        }
+
+        .menulinks .link {
+            color: #450516;
+            margin-right: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a>How to Make a Paper Doll Chain</a>
+        </div>
+        <div class="left">
+           <img src="" />
+        </div>
+        <div class="main"><video controls src="paper_doll_chain.mp4" /></div>
+        <div class="right">
+            <ol>
+                <li><a>Cut a long strip of paper.</a></li>
+                <li><a>Fold the paper like an accordion and get a rectangle.</a></li>
+                <li><a>Draw the outline of the doll in the center of the rectangle.</a></li>
+                <li><a></a>Cut out the doll.</li>
+                <li><a></a>As you slowly unroll the strip, you should end up with a chain of dolls holding hands.</li>
+                <li><a>Decorate the finished chain.</a></li>
+            </ol>
+        </div>
+        <div class="menu">
+            <center>
+                <ul class="menulinks">
+                    <li><a class="link" href="page1.html">Meow1</a></li>
+                    <li><a class="link" href="main.html">Main</a></li>
+                    <li><a class="link" href="page3.html">Meow3</a></li>
+                    <li><a class="link" href="page4.html">Meow4</a></li>
+                </ul>
+            </center>
+        </div>
+        <div class="footer"><a>Ostrikova Inha IP-25 © 2023</a></div>
+    </div>
+</body>
+
+</html>

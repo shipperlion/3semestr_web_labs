@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lab 1</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            border-style: outset;
+            border-color: #090c1a;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                'header header header header'
+                'left main main right'
+                'left menu menu right'
+                'footer footer footer right';
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr, 3fr, 1fr;
+        }
+
+        .header {
+            grid-area: header;
+            background: #36517a;
+            float: left;
+            font-size: 80px;
+            padding-left: 20px;
+            color: #ccd3f0;
+            font-family: 'Poor Richard';
+        }
+
+        .left {
+            grid-area: left;
+            float: left;
+        }
+
+        .main {
+            grid-area: main;
+            float: left;
+        }
+
+        .right {
+            grid-area: right;
+            float: left;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #36517a;
+            color: #ccd3f0;
+            font-size: 25px;
+            padding: 35px;
+            float: left;
+        }
+
+        .menu {
+            grid-area: menu;
+            background: #2a2b45;
+            float: left;
+            font-size: 25px;
+        }
+
+        .menulinks li {
+            width: 130px;
+            display: inline-block;
+        }
+
+        .menulinks .link {
+            color: #6a6c9c;
+            margin-right: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a>We're no strangers to love...</a>
+        </div>
+        <div class="left"><video muted autoplay src="not-rickroll.mp4" /></div>
+        <div class="main"><video muted autoplay src="not-rickroll.mp4" /></div>
+        <div class="right"><video muted autoplay src="not-rickroll.mp4" /></div>
+        <div class="menu">
+            <center>
+                <ul class="menulinks">
+                    <li><a class="link" href="page1.html">Meow1</a></li>
+                    <li><a class="link" href="page2.html">Meow2</a></li>
+                    <li><a class="link" href="page3.html">Meow3</a></li>
+                    <li><a class="link" href="main.html">Main</a></li>
+                </ul>
+            </center>
+        </div>
+        <div class="footer"><a>Rick Astley © 1987</a></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lab 1</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            border-style: outset;
+            border-color: #666666;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                'header header header header'
+                'left main main right'
+                'left menu menu right'
+                'footer footer footer right';
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr, 3fr, 1fr;
+            background: #D6D6D6;
+        }
+
+        .header {
+            grid-area: header;
+            float: left;
+            font-size: 80px;
+            color: #c4c4c4;
+            font-family: 'Old English Text MT';
+            padding-left: 20px;
+            background: #171717;
+        }
+
+        .left {
+            grid-area: left;
+            background-image: url("l_and_light.jpg");
+            float: left;
+        }
+
+        .main {
+            grid-area: main;
+            background: #e8e6e6;
+            float: left;
+            font-family: 'Baskerville Old Face';
+            padding-left: 20px;
+            font-size: 21px;
+        }
+
+        .right {
+            grid-area: right;
+            background-image: url("misa.jpg");
+            float: left;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #171717;
+            padding: 35px;
+            float: left;
+            font-size: 25px;
+            color: #c4c4c4;
+        }
+
+        .menu {
+            grid-area: menu;
+            background: #e8e6e6;
+            float: left;
+            font-size: 25px;
+        }
+
+        .menulinks li {
+            width: 130px;
+            display: inline-block;
+        }
+
+        .menulinks .link {
+            color: #262626;
+            margin-right: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a>Gods of Death love apples</a>
+        </div>
+        <div class="left">
+        </div>
+        <div class="main">
+            <center>
+                <a>
+                    That's right. I am Kira. So now what? Are you going to kill me right here? Listen.
+                    I'm Kira. And the god of this new world. In this world, I am the law,
+                    and I am the one maintaining order. That is the truth. Now, I am justice.
+                    The world's only hope. Are you going to kill me? Is that really the right thing to do?
+                    Capturing Kira. That might have been the just thing to do in the past.
+                    But now, it's obviously evil. The mentality of the world has changed.
+                    Are you sure you want to capture Kira just for your own satisfaction?
+                    It's been six years since Kira appeared. War is a thing of the past,
+                    most of the worst criminals have died, and the world's crime rate has gone down by 70%.
+                    But this world is still rotten. There are too many rotten people,
+                    so we must get rid of them. Humans have the right to pursue happiness and be happy.
+                    But because of a handful of rotten people, that right is easily snuffed.
+                    This is no accident. It is inevitable as long as those rotten people are alive.
+                    From the moment I got hold of that notebook-no even before that…
+                    The world has fallen as far as it could fall, and humans had rotted as much as they could rot.
+                    It all boils down to those who interfere with people's pursuit of happiness or those who id not.
+                    Those who are worthy of living and those who are not. Evil only gives birth to evil.
+                    And if those wicked people commit sins and run wild, then the weak will learn to commit crimes,
+                    and even try to justify their actions in the end. The evil… the rotten people… must be done away with.
+                </a>
+            </center>
+        </div>
+        <div class="right"></div>
+        <div class="menu">
+            <center>
+                <ul class="menulinks">
+                    <li><a class="link" href="main.html">Main</a></li>
+                    <li><a class="link" href="page2.html">Meow2</a></li>
+                    <li><a class="link" href="page3.html">Meow3</a></li>
+                    <li><a class="link" href="page4.html">Meow4</a></li>
+                </ul>
+            </center>
+        </div>
+        <div class="footer"><a>Ostrikova Inha IP-25 © 2023</a></div>
+    </div>
+</body>
+
+</html>

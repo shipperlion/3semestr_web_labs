@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lab 1</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            border-style: outset;
+            border-color: #C69632;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                'header header header header'
+                'left main main right'
+                'left menu menu right'
+                'footer footer footer right';
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr, 3fr, 1fr;
+            font-family: Garamond;
+        }
+
+        .header {
+            grid-area: header;
+            background: #335e3f;
+            float: left;
+            font-size: 80px;
+            color: #ad9a42;
+            font-family: 'Courier New';
+            padding: 20px;
+        }
+
+        .left {
+            grid-area: left;
+            background: #d6cfae;
+            float: left;
+            padding-top: 30px;
+            font-size: 20px;
+            color: #292824;
+        }
+
+        .main {
+            grid-area: main;
+            padding-left: 65px;
+            float: left;
+        }
+
+        .right {
+            grid-area: right;
+            background-image: url("darwin.jpg");
+            background-size: cover;
+            max-width: 100%;
+            float: left;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #335e3f;
+            padding: 35px;
+            float: left;
+            font-size: 25px;
+            color: #ad9a42;
+        }
+
+        .menu {
+            grid-area: menu;
+            background: #d6cfae;
+            float: left;
+            font-size: 25px;
+        }
+
+        .menulinks li {
+             width: 130px;
+             display: inline-block;
+        }
+
+        .menulinks .link {
+            color: #A7913B;
+            margin-right: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a>Darwin's Theory of Evolution</a>
+        </div>
+        <div class="left">
+            <center>
+                <a>
+                    The basic idea of biological evolution is that populations and species of organisms change over time.
+                    Today, when we think of evolution, we are likely to link this idea with one specific person:
+                    the British naturalist Charles Darwin. In the 1850s, Darwin wrote an influential and controversial
+                    book called On the Origin of Species. In it, he proposed that species evolve
+                    (or, as he put it, undergo "descent with modification"), and that all living things
+                    can trace their descent to a common ancestor. Darwin also suggested a mechanism for evolution:
+                    natural selection, in which heritable traits that help organisms survive and reproduce
+                    become more common in a population over time.
+                </a>
+            </center>
+        </div>
+        <div class="main"><img src="evolution.jpg" /></div>
+        <div class="right"></div>
+        <div class="menu">
+            <center>
+                <ul class="menulinks">
+                    <li><a class="link" href="page1.html">Meow1</a></li>
+                    <li><a class="link" href="page2.html">Meow2</a></li>
+                    <li><a class="link" href="main.html">Main</a></li>
+                    <li><a class="link" href="page4.html">Meow4</a></li>
+                </ul>
+            </center>
+        </div>
+        <div class="footer"><a>Charles Darwin © 1859</a></div>
+    </div>
+</body>
+
+</html>
