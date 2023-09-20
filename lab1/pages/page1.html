@@ -26,6 +26,7 @@
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: 1fr, 3fr, 1fr;
             background: #D6D6D6;
+            height: 100%;
         }
 
         .header {
@@ -40,9 +41,8 @@
 
         .left {
             grid-area: left;
-            background-image: url("../img/l_and_light.jpg");
-            width: 100%;
             float: left;
+            overflow: hidden;
         }
 
         .main {
@@ -56,8 +56,8 @@
 
         .right {
             grid-area: right;
-            background-image: url("../img/misa.jpg");
             float: left;
+            overflow: hidden;
         }
 
         .footer {
@@ -74,6 +74,7 @@
             background: #e8e6e6;
             float: left;
             font-size: 25px;
+            padding-top: 20px;
         }
 
         .menulinks li {
@@ -94,6 +95,12 @@
             <a>Gods of Death love apples</a>
         </div>
         <div class="left">
+            <img src="../img/l_and_light.jpg" alt="Page" usemap="#mangamap1" style="height:100%; object-fit:cover;">
+
+            <map name="mangamap1">
+                <area target="_blank" alt="Light" title="Light" href="https://en.wikipedia.org/wiki/Narcissistic_personality_disorder" coords="-1,123,210,573" shape="rect">
+                <area target="_blank" alt="L" title="L" href="https://en.wikipedia.org/wiki/Autism_spectrum" coords="226,78,550,426" shape="rect">
+            </map>
         </div>
         <div class="main">
             <center>
@@ -120,7 +127,13 @@
                 </a>
             </center>
         </div>
-        <div class="right"></div>
+        <div class="right">
+            <img src="../img/misa.jpg" alt="Page" usemap="#mangamap2" style="height: 100%; object-fit:cover;">
+
+            <map name="mangamap2">
+                <area target="_blank" alt="Misa" title="Misa" href="https://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder#:~:text=Attention%20deficit%20hyperactivity%20disorder%20(ADHD,Attention%20deficit%20hyperactivity%20disorder" coords="136,51,413,743" shape="rect">
+            </map>
+        </div>
         <div class="menu">
             <center>
                 <ul class="menulinks">
