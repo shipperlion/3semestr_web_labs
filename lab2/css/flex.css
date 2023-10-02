@@ -1,0 +1,69 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    background: #352235;
+    font-size: 80px;
+    color: #F5D5F7;
+    font-family: 'Brush Script MT';
+    order: 0;
+}
+
+.header img{
+    width: 100px;
+}
+
+.left {
+    width: 25%;
+    background: #6E125B;
+    padding-top: 20px;
+    font-size: 17px;
+    color: #F5D5F7;
+    order: 1;
+}
+
+.main {
+    width: 50%;
+    background: #FFB6C1;
+    order: 4;
+}
+
+.main video {
+    width: 20%;
+}
+
+.right {
+    width: 25%;
+    order: 6;
+}
+
+.right img {
+    width: 100%;
+}
+
+.menu {
+    aligncenter;
+    width: 50%;
+    background: #352235;
+    font-size: 25px;
+    order: 5;
+}
+
+.footer {
+    width: 75%;
+    background: #6E125B;
+    padding: 35px;
+    font-size: 25px;
+    color: #A7913B;
+    order: 3;
+}

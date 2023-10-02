@@ -1,0 +1,90 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    border-style: outset;
+    border-color: #C69632;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+img {
+    width: 100px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        'header header header header'
+        'left main main right'
+        'left menu menu right'
+        'footer footer footer right';
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr, 3fr, 1fr;
+    height: 100%;
+}
+
+.header {
+    grid-area: header;
+    background: #352235;
+    float: left;
+    font-size: 80px;
+    color: #F5D5F7;
+    font-family: 'Brush Script MT';
+}
+
+.left {
+    grid-area: left;
+    background: #6E125B;
+    float: left;
+    padding-top: 20px;
+    font-size: 19px;
+    color: #F5D5F7;
+}
+
+.main {
+    grid-area: main;
+    background: #FFB6C1;
+    float: left;
+}
+
+.right {
+    grid-area: right;
+    background-image: url("../img/pattern.jpg");
+    background-size: cover;
+    max-width: 100%;
+    float: left;
+}
+
+.footer {
+    grid-area: footer;
+    background: #6E125B;
+    padding: 35px;
+    float: left;
+    font-size: 25px;
+    color: #A7913B;
+}
+
+.menu {
+    grid-area: menu;
+    background: #352235;
+    float: left;
+    font-size: 25px;
+}
+
+.menulinks li {
+    width: 130px;
+    display: inline-block;
+}
+
+.menulinks .link {
+    color: #A7913B;
+    margin-right: 35px;
+}
