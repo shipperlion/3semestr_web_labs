@@ -37,28 +37,6 @@
         img {
             display: block;
         }
-
-        @media screen and (max-width: 599.98px) {
-            html{
-                zoom: .6;
-            }
-        }
-
-        @media screen and (max-width: 399.98px) {
-            html {
-                zoom: .6;
-            }
-
-            .mobile-padding {
-                padding-right: 0px !important;
-                padding-left: 0px !important;
-            }
-
-            .mobile-col-padding {
-                padding-right: 0 !important;
-                padding-left: 0 !important;
-            }
-        }
     </style>
 </head>
 
@@ -73,9 +51,9 @@
                 <!-- Header -->
                 <tr>
                     <td>
-                        <table border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 600px; max-width: 100%; height: 10px; max-height: 100%;">
+                        <table class="header" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 600px; max-width: 100%; height: 10px; max-height: 100%;">
                             <tr>
-                                <td style="width: 600px; background: #171717; margin: 0px; padding-left: 10px;">
+                                <td style="background: #171717; margin: 0px; padding-left: 10px;">
                                     <p style="font-size: 30px; font-family: 'UnifrakturMaguntia'; color: #c4c4c4; max-height: 100%;">Gods of Death love apples</p>
                                 </td>
                             </tr>
@@ -90,7 +68,7 @@
                             <tr>
                                 <td style="padding: 0 0 0 0; font-size: 0;" class="two-columns mobile-padding">
                                     <!-- Left Image -->
-                                    <table border="0" cellspacing="0" cellpadding="0" role="presentation" class="column" style="display: inline-block">
+                                    <table class="left" border="0" cellspacing="0" cellpadding="0" role="presentation" class="column" style="display: inline-block">
                                         <tr>
                                             <td style="max-width: 150px; height: 330px; max-height: 100%; vertical-align: top;">
                                                 <img src="https://i.ibb.co/yqJ6GXG/l-and-light.jpg" style="width: 100%; height: 100%;"/>
@@ -99,7 +77,7 @@
                                     </table>
                                     <!-- End Left Image -->
 
-                                    <table border="0" cellspacing="0" cellpadding="0" role="presentation" class="column" style="width: 300px; max-width: 100%; height: 330px; max-height: 100%; vertical-align: top; display: inline-block">
+                                    <table class="main" border="0" cellspacing="0" cellpadding="0" role="presentation" class="column" style="width: 300px; max-width: 100%; height: 330px; max-height: 100%; vertical-align: top; display: inline-block">
                                         <!-- Main -->
                                         <tr>
                                             <td class="mobile-col-padding" style="width: 300px; max-width: 100%; height: 311.5px; background: #e8e6e6; padding: 0 0 0 0; margin: 0px;">
@@ -136,7 +114,7 @@
                                                 <center>
                                                     <ul class="menulinks">
                                                         <li style="width: 100px; font-size: 15px;"><a class="link" href="index.html">Desktop</a></li>
-                                                        <li style="width: 100px; font-size: 15px;"><a class="link" href="index.html">Mobile</a></li>
+                                                        <li style="width: 100px; font-size: 15px;"><a class="link" href="mobile.html">Mobile</a></li>
                                                     </ul>
                                                 </center>
                                             </td>
@@ -148,7 +126,7 @@
                             <!-- Footer -->
                             <tr>
                                 <td>
-                                    <table border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 450px; max-width: 100%; height: 70px; max-height: 100%; vertical-align: top;">
+                                    <table class="footer" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 450px; max-width: 100%; height: 70px; max-height: 100%; vertical-align: top;">
                                         <tr>
                                             <td style="width: 100%; background: #171717; margin: 0px; padding-left: 10px;">
                                                 <p style="font-size: 15px; color: #c4c4c4;font-family: 'Libre Baskerville'">
@@ -163,7 +141,7 @@
                         </table>
 
                         <!-- Right Image -->
-                        <table border="0" cellspacing="0" cellpadding="0" role="presentation" class="column" style="display: inline-block; vertical-align: top; max-width: 150px;">
+                        <table class="right" border="0" cellspacing="0" cellpadding="0" role="presentation" class="column" style="display: inline-block; vertical-align: top; max-width: 150px;">
                             <tr>
                                 <td class="mobile-col-padding" style="vertical-align: top; max-width: 150px; height: 400px; max-height: 100%;">
                                     <img src="https://i.ibb.co/MZDc7fd/misa.jpg" style="width: 100%; height: 100%;" />
