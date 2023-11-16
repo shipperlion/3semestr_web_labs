@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link href="../css/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <p>LOREM IPSUM</p>
+        </div>
+
+        <div class="col-9 left">
+            <div class="col-3 aside-left">
+                <h2>What?</h2>
+                <p>Chania is a city on the island of Crete.</p>
+                <h2>Where?</h2>
+                <p>Crete is a Greek island in the Mediterranean Sea.</p>
+            </div>
+
+            <div class="col-9 main">
+                <h1>Lorem ipsum</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis justo vulputate, eleifend libero quis, fringilla nibh.
+                    Sed sit amet porttitor nulla. Vivamus quis est urna. Integer ornare nibh eros, quis dictum nisl imperdiet eget.
+                    Suspendisse et efficitur massa, hendrerit cursus elit. Mauris eros lorem, dignissim ut vulputate et, sagittis et massa.
+                    Suspendisse interdum elit purus, tristique consectetur turpis faucibus sed. Sed molestie turpis a vehicula vestibulum.
+                    Fusce et nunc euismod, accumsan tellus feugiat, convallis mauris. Vivamus pulvinar viverra purus a blandit.
+                </p>
+
+                <input id="firstSideForm">
+
+                <input id="secondSideForm">
+
+                <input id="thirdSideForm">
+                <button id="submit_button" type="button" onclick="setCookie('triangle', validateTriangle(validateInput()), 1); alert(getCookie('triangle'));">Submit</button>
+
+            </div>
+
+            <div class="col-9 menu">
+                <ul>
+                    <li>meow</li>
+                    <li>meow</li>
+                </ul>
+            </div>
+
+            <div class="col-12 footer">
+                <p>42</p>
+            </div>
+        </div>
+
+        <div class="col-3 right">
+            <div class="aside-right">
+                <h2>What?</h2>
+                <p>Chania is a city on the island of Crete.</p>
+                <h2>Where?</h2>
+                <p>Crete is a Greek island in the Mediterranean Sea.</p>
+                <h2>How?</h2>
+                <p>You can reach Chania airport from all over Europe.</p>
+                <h2>How?</h2>
+                <p>You can reach Chania airport from all over Europe.</p>
+                <input type="checkbox" id="check" onclick="capitalizeLetters()" />
+                <a>Capitalize first letters</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
