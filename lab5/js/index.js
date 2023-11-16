@@ -130,6 +130,6 @@ swapText16();
 
 var textBlock3 = document.querySelector('.main > p');
 textBlock3.textContent += findPentagonSquare(10).toString();
-//window.onbeforeunload = refreshPage();
+window.onbeforeunload = refreshPage();
 
 
