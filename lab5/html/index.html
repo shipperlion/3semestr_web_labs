@@ -16,10 +16,18 @@
 
         <div class="col-9 left">
             <div class="col-3 aside-left">
-                <h2>What?</h2>
-                <p>Chania is a city on the island of Crete.</p>
-                <h2>Where?</h2>
-                <p>Crete is a Greek island in the Mediterranean Sea.</p>
+                <p>
+                    Meow Meow Meow Meow Meow Meow Meow Meow Meow
+                    Meow Meow Meow Meow Meow Meow Meow Meow Meow
+                    Meow Meow Meow Meow Meow Meow Meow Meow Meow
+                    Meow Meow Meow Meow Meow Meow Meow Meow Meow
+                    Meow Meow Meow Meow Meow Meow Meow Meow Meow
+                    Meow Meow Meow Meow Meow Meow Meow Meow Meow
+                </p>
+
+                <input id="textBlock2Form">
+                <button id="replace_button" type="button" onclick="replaceBlock2();">Save</button>
+                <button id="undo_button" type="button" onclick="undoBlock2();">Erase</button>
             </div>
 
             <div class="col-9 main">
@@ -37,8 +45,16 @@
                 <input id="secondSideForm">
 
                 <input id="thirdSideForm">
-                <button id="submit_button" type="button" onclick="setCookie('triangle', validateTriangle(validateInput()), 1); alert(getCookie('triangle'));">Submit</button>
+                <button id="submit_button" type="button" onclick="setCookie('triangle', validateTriangle(validateInput()), 1);">Submit</button>
 
+                <ul>
+                    <li id="li1" ondblclick="dblclickOnFirst()">1</li>
+                    <li id="li2" ondblclick="dblclickOnSecond()">2</li>
+                    <li id="li3" ondblclick="dblclickOnThird()">3</li>
+                    <li id="li4" ondblclick="dblclickOnFourth()">4</li>
+                    <li id="li5" ondblclick="dblclickOnFifth()">5</li>
+                    <li id="li6" ondblclick="dblclickOnSixth()">6</li>
+                </ul>
             </div>
 
             <div class="col-9 menu">
@@ -63,7 +79,7 @@
                 <p>You can reach Chania airport from all over Europe.</p>
                 <h2>How?</h2>
                 <p>You can reach Chania airport from all over Europe.</p>
-                <input type="checkbox" id="check" onclick="capitalizeLetters()" />
+                <input type="checkbox" id="capitalize" onclick="capitalizeBlock4();" onblur="capitalizeLetters();" />
                 <a>Capitalize first letters</a>
             </div>
         </div>

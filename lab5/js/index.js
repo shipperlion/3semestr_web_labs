@@ -1,3 +1,4 @@
+// Task 1
 function swapText16() {
     var textBlock1 = document.querySelector('.header > p');
     var textBlock6 = document.querySelector('.footer > p');
@@ -6,13 +7,25 @@ function swapText16() {
     textBlock1.textContent = textBlock6.textContent;
     textBlock6.textContent = tempTextVar;
 }
+swapText16();
 
+// Task 2
+function findPentagonSquare(side) {
+    return 5 * (Math.sqrt(3) * Math.pow(side, 2) / 4);
+}
+
+var textBlock3 = document.querySelector('.main > p');
+textBlock3.textContent += findPentagonSquare(10).toString();
+
+// Task 3
 function validateInput() {
     var firstFormValue = document.getElementById('firstSideForm').value;
     var secondFormValue = document.getElementById('secondSideForm').value;
     var thirdFormValue = document.getElementById('thirdSideForm').value;
 
-    if (isNaN(firstFormValue) || isNaN(secondFormValue) || isNaN(thirdFormValue)) {
+    var checkForWhitespace = firstFormValue == 0 || secondFormValue == 0 || thirdFormValue == 0;
+
+    if (isNaN(firstFormValue) || isNaN(secondFormValue) || isNaN(thirdFormValue) || checkForWhitespace) {
         alert("Invalid input");
         return false;
     }
@@ -62,7 +75,7 @@ function eraseCookie(name) {
 function refreshPage() {
     alert("Saved cookie: " + getCookie("triangle"));
     var formRemoval = confirm("Upon refreshing the page all cookies will be deleted. Do you want to remove form?");
-    
+
     eraseCookie("triangle");
     if (formRemoval == true) {
         document.getElementById('firstSideForm').style.display = 'none';
@@ -78,58 +91,102 @@ function refreshPage() {
     }
 }
 
+window.onbeforeunload = refreshPage();
 
-// Find the square of a regular pentagon
-function findPentagonSquare(side) {
-    return 5 * (Math.sqrt(3) * Math.pow(side, 2) / 4);
+// Task 4
+String.prototype.replaceAt = function (index, replacement) {
+    return this.substring(0, index) + replacement + this.substring(index + replacement.length);
 }
 
 function capitalizeBlock4() {
-    var textBlock4Paragraphs = document.getElementsByTagName('p');
+    var textBlock4Paragraphs = document.querySelectorAll(".aside-right p");
+    
     for (var i = 0; i < textBlock4Paragraphs.length; i++) {
-        var paragraphWords = textBlock4Paragraphs[i];
-        for (var j = 1; j < paragraphWords.length; j++) {
-            if (paragraphWords[j - 1] == ' ') {
-                paragraphWords[j].toUpperCase();
+        var paragraphWords = textBlock4Paragraphs[i].textContent.split(' ');
+        textBlock4Paragraphs[i].textContent = "";
+        for (var j = 0; j < paragraphWords.length; j++) {
+            textBlock4Paragraphs[i].textContent += paragraphWords[j].replaceAt(0, paragraphWords[j][0].toUpperCase());
+            if (j < paragraphWords.length - 1) {
+                textBlock4Paragraphs[i].textContent += " ";
             }
         }
     }
-
 }
 
 function capitalizeLetters() {
-    
-    if (capitalize == true) {
-        capitalize.addEventListener("blur", (event) => {
-            capitalizeBlock4();
-        }, true,
-        );
+    if (document.getElementById('capitalize').checked == true) {
+        alert("blur");
+        var textBlock4 = document.querySelectorAll(".aside-right p");
+        localStorage.setItem('p1', textBlock4[0].textContent);
+        localStorage.setItem('p2', textBlock4[1].textContent);
+        localStorage.setItem('p3', textBlock4[2].textContent);
+        localStorage.setItem('p4', textBlock4[3].textContent);
     }
 }
 
-//$(function () {
-//    $("aside-right").attr("contenteditable", "true")
-
-//    var capitalize = document.getElementById("check");
-
-//    $(capitalize).blur(function () {
-//        localStorage.setItem('page_html', this.innerHTML);
-//    });
-
-//    if (localStorage.getItem('page_html')) {
-//        capitalize.innerHTML = localStorage.getItem('page_html');
-//    }
-//});
-
-function reset() {
-    localStorage.clear();
-    window.location = window.location;
+function getFromLocalStorage() {
+    var textBlock4 = document.querySelectorAll(".aside-right p");
+    textBlock4[0].textContent = localStorage.getItem('p1');
+    textBlock4[1].textContent = localStorage.getItem('p2');
+    textBlock4[2].textContent = localStorage.getItem('p3');
+    textBlock4[3].textContent = localStorage.getItem('p4');
 }
 
-swapText16();
+window.onload = getFromLocalStorage();
 
-var textBlock3 = document.querySelector('.main > p');
-textBlock3.textContent += findPentagonSquare(10).toString();
-window.onbeforeunload = refreshPage();
+// Task 5
 
+function dblclickOnFirst() {
+    var div = document.getElementsByClassName("header");
+        p = document.createElement("a");
+    p.textContent = '1';
+    div[0].prepend(p);
+}
 
+function dblclickOnSecond() {
+    var div = document.getElementsByClassName("aside-left");
+    p = document.createElement("p");
+    p.textContent = '2';
+    div[0].prepend(p);
+}
+
+function dblclickOnThird() {
+    var div = document.getElementsByClassName("main");
+    p = document.createElement("p");
+    p.textContent = '3';
+    div[0].prepend(p);
+}
+
+function dblclickOnFourth() {
+    var div = document.getElementsByClassName("aside-right");
+    p = document.createElement("p");
+    p.textContent = '4';
+    div[0].prepend(p);
+}
+
+function dblclickOnFifth() {
+    var div = document.getElementsByClassName("menu");
+    p = document.createElement("p");
+    p.textContent = '5';
+    div[0].prepend(p);
+}
+
+function dblclickOSixth() {
+    var div = document.getElementsByClassName("footer");
+    p = document.createElement("p");
+    p.textContent = '6';
+    div[0].prepend(p);
+}
+
+function replaceBlock2() {
+    var textBlock2 = document.querySelector(".aside-left p");
+    localStorage.setItem("block2", textBlock2.textContent);
+    textBlock2.textContent = document.getElementById('textBlock2Form').value;
+    localStorage.setItem("new_block2", textBlock2.textContent);
+}
+
+function undoBlock2() {
+    var textBlock2 = document.querySelector(".aside-left p");
+    localStorage.removeItem("new_block2");
+    textBlock2.textContent = localStorage.getItem("block2");
+}
