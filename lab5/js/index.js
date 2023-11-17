@@ -23,9 +23,9 @@ function validateInput() {
     var secondFormValue = document.getElementById('secondSideForm').value;
     var thirdFormValue = document.getElementById('thirdSideForm').value;
 
-    var checkForWhitespace = firstFormValue == 0 || secondFormValue == 0 || thirdFormValue == 0;
+    var checkForEmptyString = firstFormValue == "" || secondFormValue == "" || thirdFormValue == "";
 
-    if (isNaN(firstFormValue) || isNaN(secondFormValue) || isNaN(thirdFormValue) || checkForWhitespace) {
+    if (isNaN(firstFormValue) || isNaN(secondFormValue) || isNaN(thirdFormValue) || checkForEmptyString) {
         alert("Invalid input");
         return false;
     }
@@ -39,9 +39,7 @@ function validateTriangle(validation) {
     var secondSide = Number(document.getElementById('secondSideForm').value);
     var thirdSide = Number(document.getElementById('thirdSideForm').value);
 
-    var checkForEmptyString = firstSide == "" || secondSide == "" || thirdSide == "";
-
-    if (firstSide > secondSide + thirdSide || secondSide > firstSide + thirdSide || thirdSide > firstSide + secondSide || checkForEmptyString) {
+    if (firstSide > secondSide + thirdSide || secondSide > firstSide + thirdSide || thirdSide > firstSide + secondSide) {
         alert("Triangle does not exist");
         return "Triangle does not exist";
     }
