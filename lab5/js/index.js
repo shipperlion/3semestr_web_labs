@@ -39,7 +39,9 @@ function validateTriangle(validation) {
     var secondSide = Number(document.getElementById('secondSideForm').value);
     var thirdSide = Number(document.getElementById('thirdSideForm').value);
 
-    if (firstSide > secondSide + thirdSide || secondSide > firstSide + thirdSide || thirdSide > firstSide + secondSide) {
+    var checkForEmptyString = firstSide == "" || secondSide == "" || thirdSide == "";
+
+    if (firstSide > secondSide + thirdSide || secondSide > firstSide + thirdSide || thirdSide > firstSide + secondSide || checkForEmptyString) {
         alert("Triangle does not exist");
         return "Triangle does not exist";
     }
@@ -84,10 +86,10 @@ function refreshPage() {
         document.getElementById('submit_button').style.display = 'none';
     } else {
         alert("Page will be refreshed and form will stay.")
-        document.getElementById('firstSideForm').style.display = 'block';
-        document.getElementById('secondSideForm').style.display = 'block';
-        document.getElementById('thirdSideForm').style.display = 'block';
-        document.getElementById('submit_button').style.display = 'block';
+        document.getElementById('firstSideForm').style.display = 'inline';
+        document.getElementById('secondSideForm').style.display = 'inline';
+        document.getElementById('thirdSideForm').style.display = 'inline';
+        document.getElementById('submit_button').style.display = 'inline';
     }
 }
 
