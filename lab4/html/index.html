@@ -1,58 +1,59 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 <head>
     <meta charset="utf-8">
     <title>Desktop</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="../css/index.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <div class="main">
-            <div class="header">
-                <img id="logo" src="https://i.ibb.co/XDyPnxQ/logo.png"/>
-                <a id="menu_button" href="mobile.html"><img id="menu_img" src="https://i.ibb.co/rMQRjDq/menu.png" /></a>
-            </div>
-            
-            <div class="content">
-                <div class="right">
-                    <img id="redcat_img" src="https://i.ibb.co/YXHZy5y/redcat.jpg" />
-
-                    <h1>
-                        Vivamus at libero tempor
-                    </h1>
-                    <p>
-                        Vivamus scelerisque, justo nec tempor volutpat,
-                        est nunc bibendum ex, a dictum justo risus non nibh.
-                        Vestibulum ante ipsum primis in faucibus orci luctus
-                        et ultrices posuere cubilia curae;
-                        Donec pretium vulputate libero in accumsan.
-                    </p>
-
-                    <a href="https://en.wikipedia.org/wiki/Cat">LEARN MORE</a>
-                </div>
-
-                <div class="fluffycat">
-                    <img id="fluffycat_img" src="https://i.ibb.co/jRSVjGm/fluffycat.jpg" />
-                </div>
-
-                <div class="left">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Quisque vulputate posuere ex, at fringilla odio sagittis vitae.
-                        Ut eu sem ac ante pulvinar luctus. Proin et sodales ex.
-                        Nullam placerat volutpat ipsum ut hendrerit.
-                        Phasellus eu est lectus. Duis pretium nisi felis, at egestas odio semper ac.
-                    </p>
-
-                    <img id="tabbycat_img" src="https://i.ibb.co/2Pr30CD/tabbycat.jpg" />
-                </div>
-            </div>
+    <div class="wrapper">
+        <div class="col-8 header">
+            <img id="logo" src="https://i.ibb.co/XDyPnxQ/logo.png" />
+            <a id="menu_button" href="mobile.html"><img id="menu_img" src="https://i.ibb.co/rMQRjDq/menu.png" /></a>
         </div>
-        <div class="footer">
-            <center>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Quisque vulputate posuere ex, at fringilla odio sagittis vitae.</center>
+        <div class="col-8 main">
+            <div class="col-6 left">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vulputate posuere ex, at fringilla odio sagittis vitae.
+                    Ut eu sem ac ante pulvinar luctus. Proin et sodales ex.
+                    Nullam placerat volutpat ipsum ut hendrerit.
+                    Phasellus eu est lectus. Duis pretium nisi felis, at egestas odio semper ac.
+                </p>
+            </div>
+
+            <img id="fluffycat_img" src="https://i.ibb.co/jRSVjGm/fluffycat.jpg" />
+
+            <img id="redcat_img" src="https://i.ibb.co/YXHZy5y/redcat.jpg" />
+
+            <div class="col-6 right">
+                <h1>
+                    Vivamus at libero tempor
+                </h1>
+                <p>
+                    Vivamus scelerisque, justo nec tempor volutpat,
+                    est nunc bibendum ex, a dictum justo risus non nibh.
+                    Vestibulum ante ipsum primis in faucibus orci luctus
+                    et ultrices posuere cubilia curae;
+                    Donec pretium vulputate libero in accumsan.
+                </p>
+
+                <a href="https://en.wikipedia.org/wiki/Cat">LEARN MORE</a>
+            </div>
+
+            <img id="tabbycat_img" src="https://i.ibb.co/2Pr30CD/tabbycat.jpg" />
+        </div>
+
+        <div class="col-12 footer">
+            <center>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+                    Quisque vulputate posuere ex, at fringilla odio sagittis vitae.
+                </p>
+            </center>
         </div>
     </div>
 </body>
